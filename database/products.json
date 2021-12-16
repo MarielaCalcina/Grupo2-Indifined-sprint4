@@ -1,0 +1,15 @@
+[
+    {
+        "id-product": 1,
+        "name-product":"",
+        "description-product":"",
+        "category-product":"",
+        "size-product":"",
+        "quantity-product":"",
+        "colour-product":"",
+        "price-product":"",
+        "discount-product":"",
+        "image-product":""
+    }
+        
+]
