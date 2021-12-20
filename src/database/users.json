@@ -1,10 +1,45 @@
 [
     {
         "id-user":1,
-        "name-user":"",
-        "email-user":"",
-        "date-user":"",
-        "pass-user":""
+        "name-user":"AlexanderLamas",
+        "email-user":"alexandernarcisolamas@gmail.com",
+        "date-user":"13-05-2002",
+        "pass-user":"Admin"
 
+    },
+    {
+        "id-user":2,
+        "name-user":"GabrielGomez",
+        "email-user":"gabrielgomez@gmail.com",
+        "date-user":"",
+        "pass-user":"Admin"
+    },
+    {
+        "id-user":3,
+        "name-user":"CamilaLedezma",
+        "email-user":"camilaledezma@gmail.com",
+        "date-user":"",
+        "pass-user":"Admin"
+    },
+    {
+        "id-user":4,
+        "name-user":"MarielaCalcina",
+        "email-user":"marielacalcina@gmail.com",
+        "date-user":"24-11-2001",
+        "pass-user":"Admin"
+    },
+    {
+        "id-user":5,
+        "name-user":"Elkpo123",
+        "email-user":"capo@hotmail.com",
+        "date-user":"12-03-2010",
+        "pass-user":"contrasena"
+    },
+    {
+        "id-user":6,
+        "name-user":"MisterX",
+        "email-user":"Señor@outlook.com",
+        "date-user":"22-12-2000",
+        "pass-user":"contrasena"
     }
 ]
