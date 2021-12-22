@@ -1,20 +1,22 @@
-<%- include ("partials/head") %> 
-<%- include("partials/header") %> 
+<html>
+<%- include ("../partials/head") %> 
+<body>
+<%- include("../partials/header") %> 
 <main class="product-edit">
-    <section class="titulos"><h2>Modificar producto</h2></section>
+    <section class="titulos"><h2>Modificar producto: <%= productToEdit.name %></h2></section>
     
     <section class="forms">
         
-        <form action="/" method="post">
+        <form action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="post">
+            <!--<div>
+                <label for="id-product" value="id-product">ID de producto a modificar:<input type="text"  name="id-product" required></label>
+            </div>-->
             <div>
-                <label for="id-product" value="id-product">ID de producto a modificar:<input type="text" name="id-product" required></label>
-            </div>
-            <div>
-                <label for="name-product" value="name-product">Nombre:<input type="text" name="name-product" required></label>
+                <label for="name-product" value="name-product">Nombre:<input type="text" value="<%= productToEdit.name %>" name="name-product" required></label>
             </div>
             <div class="product-desc"> 
                 <label for="description-product">Descripción:</label>
-                <textarea minlength="4" name="description-product" required></textarea>
+                <textarea minlength="4" name="description-product" required><%= productToEdit.description%></textarea>
             </div>  
             <div>
                 <label for="category-product">Categoría:</label>
@@ -38,28 +40,30 @@
             </div>
             <div>
                 <label for="quantity-product">Cantidad: </label>
-                <input type="number" name="cantidad-product" required>
+                <input type="number" value="<%= productToEdit.quantity %>" name="quantity-product" id="cantidad-product" required>
             </div>
             <div>
                 <label for="colour-product">Color: </label>
-                <input type="text" name="colour-product" required>
+                <input type="text" value="<%= productToEdit.colour %>" name="colour-product" required>
             </div>
             <div>
                 <label for="price-product">Precio: </label>
-                <input type="number" name="price-product" required>
+                <input type="number" value="<%= productToEdit.price %>" name="price-product" required>
             </div>
             <div>
                 <label for="discount-product">Descuento: </label>
-                <input type="number" name="discount-product" required>
+                <input type="number" value="<%= productToEdit.discount %>" name="discount-product" required>
             </div>
-            <div>
+            <!--<div>
                 <label for="image-product">Imagen:</label>
                 <input type="file" name="image-product" accept="image/png" required>
-            </div>
+            </div>-->
             <div class="submit">
                 <button type="submit" name="submit">Guardar cambios</button>
             </div>
         </form>
     </section>
 </main>
-<%- include("partials/footer") %> 
+<%- include("../partials/footer") %> 
+</body>
+</html>

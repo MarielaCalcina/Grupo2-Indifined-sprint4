@@ -1,17 +1,87 @@
+const fs = require('fs');
+const path = require('path');
+
+
+// ESTO SERIA EL GESTOR DEL MODELO
+const jsonDB = require('../model/jsonDatabase');
+
+// Maneja todos los métodos para PRODUCTO, que lo pasa como parámetro
+const productModel = jsonDB('products');
+
 const productController = {
-    
-    productCart : function(req, res){
-        return res.render('productCart');
+    index : (req, res)=>{
+        // muestra todos los productos en '/products'
+        const products=productModel.all();
+        res.render('products/products',{products});
     },
-    productDetail : function(req, res){
-        return res.render('productDetail');
+    productCart : (req, res)=>{
+        res.render('products/productCart');
     },
-    productCreate : function(req, res){
-        return res.render('productCreate');
+    detail : (req, res)=>{
+        // se busca por id el producto del cual se mostrara los detalles 
+        let productDetail=productModel.find(req.params.id);
+        res.render('products/productDetail',{productDetail});
     },
-    productEdit : function(req, res){
-        return res.render('productEdit');
-    }
+    create : (req, res)=>{
+        res.render('products/productCreate');
+    },
+    store : (req, res)=>{
+        // se obtiene valores del form para crear un nuevo producto
+        if(req.file){
+			let creado={
+			name:req.body.name,
+			description: req.body.description,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: req.body.image,
+			category: req.body.category,
+			image: req.file.filename
+		}
+        //se llama al metodo que crea un nuevo producto
+		productModel.create(creado);
+		res.redirect('/products/'+creado.id);
+		}else{
+			res.redirect('/products');
+		}
+    },
+    edit : (req, res)=>{
+        //se busca el producto a editar con el id
+        let productToEdit=productModel.find(req.params.id);
+        
+        res.render('products/productEdit',{productToEdit});
+    }, 
+    update:(req,res)=>{
+        // se busca segun id el producto que se desea moficar
+        let productToUpdate=productModel.find(req.params.id);
+        // del form se obtienen los valores modificados, menos id ni imagen del producto
+        let modificado={
+            id:productToUpdate.id,
+			name:req.body.name,
+			price: req.body.price,
+			discount: req.body.discount,
+			category: req.body.category,
+			description: req.body.description,
+			image:productToUpdate.image
+        }
+        // se llama al metodo que realiza la modificacion
+        productModel.update(modificado);
+        res.render(creado.name + 'fue editado')
+        
+        res.redirect('/products')
+    },
+
+    destroy:(req, res)=>{
+        //se busca segun id el producto a eliminar 
+        let toDelete=productModel.find(req.params.id);
+        //se llama al metodo que elimina y tambien se elimina la imagen para no tener archivos "basura" que ocupen memoria
+        productModel.delete(req.params.id)
+        let imagePath = path.join(__dirname, '../../public/images/products/' + toDelete.image);
+		if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath)
+        }
+
+		res.redirect('/');
+    },
 }
 
 module.exports = productController;

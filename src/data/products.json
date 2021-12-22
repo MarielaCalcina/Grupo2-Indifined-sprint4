@@ -1,0 +1,50 @@
+[
+ {
+  "id": 1,
+  "name": "MOORE PIMA",
+  "description": "Esta prenda posee tencnología HIDROWICK, Disipa la transpiración evitando el reingreso de humedad en la piel y en la prenda, Regula la temperatura corporal y facilita la transpiracion de la piel, Costuras planas, Caña media",
+  "category": "remeras",
+  "size": "XS",
+  "quantity": "3",
+  "colour": "TERRACOTA",
+  "price": "1500",
+  "discount": "35",
+  "image": "remera1.1.jpg"
+ },
+ {
+  "id": 2,
+  "name": "MOORE PIMA",
+  "description": "Esta prenda posee tencnología HIDROWICK, Disipa la transpiración evitando el reingreso de humedad en la piel y en la prenda, Regula la temperatura corporal y facilita la transpiracion de la piel, Costuras planas, Caña media",
+  "category": "remeras",
+  "size": "XS",
+  "quantity": "3",
+  "colour": "TERRACOTA",
+  "price": "1500",
+  "discount": "35",
+  "image": "remera1.1.jpg"
+ },
+ {
+  "id": 3,
+  "name": "MOORE PIMA",
+  "description": "Esta prenda posee tencnología HIDROWICK, Disipa la transpiración evitando el reingreso de humedad en la piel y en la prenda, Regula la temperatura corporal y facilita la transpiracion de la piel, Costuras planas, Caña media",
+  "category": "remeras",
+  "size": "XS",
+  "quantity": "3",
+  "colour": "TERRACOTA",
+  "price": "1500",
+  "discount": "35",
+  "image": "bermuda-flex-gris.jpg"
+ },
+ {
+  "id": 4,
+  "name": "MOORE PIMA",
+  "description": "Esta prenda posee tencnología HIDROWICK, Disipa la transpiración evitando el reingreso de humedad en la piel y en la prenda, Regula la temperatura corporal y facilita la transpiracion de la piel, Costuras planas, Caña media",
+  "category": "remeras",
+  "size": "XS",
+  "quantity": "3",
+  "colour": "TERRACOTA",
+  "price": "1500",
+  "discount": "35",
+  "image": "bermuda-flex-gris.jpg"
+ }
+]

@@ -1,10 +1,10 @@
 const userController = {
     
-    login : function(req, res){
-        return res.render('login');
+    login : (req, res)=>{
+        res.render('user/login');
     },
-    register : function(req, res){
-        return res.render('register');
+    register : (req, res)=>{
+        res.render('user/register');
     }
 
 }

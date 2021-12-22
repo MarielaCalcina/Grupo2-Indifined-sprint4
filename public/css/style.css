@@ -190,6 +190,7 @@ header #menu .burger-menu{
     width: 150px;
 }
 
+
 /* ========================= MAIN INDEX ========================= */
 
 main.index section.sec-banner{
@@ -237,16 +238,16 @@ main.index .sec-categorys  h4{
     text-transform: uppercase;
 }
 main.index .sec-categorys .remeras{
-    background-image:url('/images/categorias/cate-1.JPG');
+    background-image:url('/images/pagina/cate-1.JPG');
 }
 main.index .sec-categorys .pantalones{
-    background-image:url('/images/categorias/cate-3.jpg');
+    background-image:url('/images/pagina/cate-3.jpg');
 }
 main.index .sec-categorys .abrigos{
-    background-image:url('/images/categorias/cate-2.jpg');
+    background-image:url('/images/pagina/cate-2.jpg');
 }
 main.index .sec-categorys .accesorios{
-    background-image:url('/images/categorias/cate-4.jpg');
+    background-image:url('/images/pagina/cate-4.jpg');
 }
 main.index h3{
     padding: 10px;
@@ -683,6 +684,48 @@ main.login section.forms form{
     align-items: center;
     flex-direction: column;
 }
+/* ========================= MAIN PRODUCTS ========================= */
+
+main.products h3{
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+main.products .p-create{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin:20px 10px;
+}
+main.products .p-create a{
+    width: 60%;
+    align-content: center;
+}
+main.products .botones{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-around;
+}
+main.products .botones div,
+main.products .botones form{
+    width: 45%;
+}
+main.products button{
+
+    height: 30px;
+    border: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    color: white;
+    background-color: #ff523b;
+    padding: 10px 0px;
+    width: 100%;
+}
+
 /* ========================= FOOTER ========================= */
 footer{
     background-color: black;
@@ -884,15 +927,17 @@ footer section.copy-right{
         color:#ff523b;
     }
     /* ========================= MAIN INDEX ========================= */
-    main.index{
+    main.index, main.products{
         width: 75%;
         margin: 0px auto;
     }
-    main.index .sec-categorys article{
+    main.index .sec-categorys article,
+    main.products .sec-categorys article{
         width: 48%;
     }
     main.index section.sec-carrousel article.product,
-    main.product-detail section.sec-carrousel article.product{
+    main.product-detail section.sec-carrousel article.product,
+    main.products section.sec-carrousel article.product{
         width: 48%;
     }
     main.index .sec-categorys article:hover{
@@ -972,6 +1017,12 @@ footer section.copy-right{
         letter-spacing: 5px;
     }
     /* ========================= MAIN INDEX ========================= */
+    main.products .sec-categorys article{
+        width: 24%;
+    }
+    main.products section.sec-carrousel article.product{
+        width: 24%;
+    }
     main.index .sec-categorys article{
         width: 24%;
         height: 200px;
