@@ -1,4 +1,4 @@
-- SPRINT 3*
+- SPRINT 4*
 ## 1. Comenzar a hacer:
 Preguntar si estamos trabados en algo<br> 
 *Tener iniciativa*<br> 
@@ -10,7 +10,8 @@ Practicar tanto en el playground como de forma audidacta<br>
 Ser empatic@ con los tiempos de los demás<br> 
 
 ## 4. Hacer menos:
-*No tener actulizado el trello*<br> 
+*No tener actulizado el trello*<br>
+*No avisar que no estaremos en clase*<br>
 
 ## 5. Dejar de hacer:
 *Esperar a que otro me diga que hacer*<br> 
