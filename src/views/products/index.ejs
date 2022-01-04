@@ -20,19 +20,22 @@
         <h3>OFERTAS</h3>
         <section class="sec-carrousel">
             <i class="fas fa-arrow-left"></i>
-            <% indexp.forEach(function (indexp) {%>
-                <article class="product">
-                    <img src="/images/product-image/<%= indexp.image %>" alt="<%= indexp.name %>">
+            <% for(products of products){ %>
+                <% if (products.condition=="oferta") { %>
+                 <article class="product">
+                    <img src="/images/product-image/<%= products.image %>" alt="<%= products.name %>">
                     <div class="product-description">
                             <i class="fas fa-shopping-cart"></i>
-                            <p class="p-name"><%= indexp.name %></p>
-                            <p class="p-price"> $ <%= indexp.price %></p>
-                            <p class="p-descuentos"><%= indexp.discount %> % </p>
-                            <a href="products/<%= indexp.id %> "><button class="ver-btn">VER</button></a>
+                            <p class="p-name"><%= products.name %></p>
+                            <p class="p-price"> $ <%= products.price %></p>
+                            <p class="p-descuentos"><%= products.discount %> % </p>
+                            <a href="products/<%= products.id %> "><button class="ver-btn">VER</button></a>
                         </div>
                     </article>
-            <% }) %>
+                <% } %>
                 
+            <% } %> 
+            
                 <i class="fas fa-arrow-right"></i>
         </section>
         

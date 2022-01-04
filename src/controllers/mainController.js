@@ -11,8 +11,8 @@ const productModel = jsonDB('products');
 
 const mainController= {
     index : (req, res)=>{
-        const indexp=productModel.all()
-        res.render('products/index',{indexp});
+        const products=productModel.all()
+        res.render('products/index',{products});
     },
 }
 module.exports = mainController;

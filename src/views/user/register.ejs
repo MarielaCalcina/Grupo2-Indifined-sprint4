@@ -8,26 +8,27 @@
             </section>
         
             <section class="forms">
-                <form action="/" method="post">
+                <form action="/register" method="POST">
+                    <!--
                     <div class="google">
-                        <button type="submit"><i class="fab fa-google"></i> Registrate con Google</button>
+                        <button type=""><i class="fab fa-google"></i> Registrate con Google</button>
                     </div>
                     <div class="facebook">
-                        <button type="submit"><i class="fab fa-facebook"></i> Registrate con Facebook</button>
-                    </div>
+                        <button type=""><i class="fab fa-facebook"></i> Registrate con Facebook</button>
+                    </div> -->
                     <div class="nombreApellido">
-                        <label for="name-user">Nombre<b>(*)</b><input type="text" name="name-user" id="nya" minlength="3" required></label>
+                        <label for="name">Nombre<b>(*)</b><input type="text" name="name" minlength="3" required></label>
                     </div>
         
                     <div class="email">
-                        <label for="email-user">Email <b>(*)</b><input type="text" name="email-user" id="em" placeholder="ejemplo@gmail.com" required></label>
+                        <label for="email">Email <b>(*)</b><input type="text" name="email"  placeholder="ejemplo@gmail.com" required></label>
                     </div>
         
-                    <div class="fechaNacimiento"><label for="date-user">Fecha de nacimiento<input type="date" name="date-user"></label></div>
+                    <div class="fechaNacimiento"><label for="date">Fecha de nacimiento<input type="date" name="date"></label></div>
 
-                    <div class="password"><label for="pass-user">Contraseña<b>(*)</b><input type="password" name= "pass-user" id="pass" minlength="6" maxlength="12" placeholder="min. 6 caracteres" required></label></div>
+                    <div class="password"><label for="pass">Contraseña<b>(*)</b><input type="password" name= "pass"  minlength="6" maxlength="12" placeholder="min. 6 caracteres" required></label></div>
         
-                    <div class="confirmacionPassword"><label for="passCon-user">Confirmar Contraseña<b>(*)</b><input type="password" name="passCon-user" id="passCon" minlength="6" maxlength="12" required></label></div>
+                    <div class="confirmacionPassword"><label for="passCon">Confirmar Contraseña<b>(*)</b><input type="password" name="passCon"  minlength="6" maxlength="12" required></label></div>
         
                     <div class="submit"><label for="submit"><button type="submit" id="submit">Crear Cuenta</button></label></div>
                 </form>

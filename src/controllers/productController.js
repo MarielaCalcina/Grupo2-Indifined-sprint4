@@ -31,11 +31,14 @@ const productController = {
 			let creado={
 			name:req.body.name,
 			description: req.body.description,
+            category: req.body.category,
+            size: req.body.size,
+            quantity: req.body.quantity,
+            colour: req.body.colour,
 			price: req.body.price,
 			discount: req.body.discount,
-			image: req.body.image,
-			category: req.body.category,
-			image: req.file.filename
+			image: req.file.filename,
+            condition: req.body.condition
 		}
         //se llama al metodo que crea un nuevo producto
 		productModel.create(creado);
@@ -55,13 +58,16 @@ const productController = {
         let productToUpdate=productModel.find(req.params.id);
         // del form se obtienen los valores modificados, menos id ni imagen del producto
         let modificado={
-            id:productToUpdate.id,
-			name:req.body.name,
+            name:req.body.name,
+			description: req.body.description,
+            category: req.body.category,
+            size: req.body.size,
+            quantity: req.body.quantity,
+            colour: req.body.colour,
 			price: req.body.price,
 			discount: req.body.discount,
-			category: req.body.category,
-			description: req.body.description,
-			image:productToUpdate.image
+			image: req.file.filename,
+            condition: req.body.condition
         }
         // se llama al metodo que realiza la modificacion
         productModel.update(modificado);

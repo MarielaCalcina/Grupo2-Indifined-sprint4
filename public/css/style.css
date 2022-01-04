@@ -1052,6 +1052,10 @@ footer section.copy-right{
         transform: translateY(0px);
         opacity: 1;
     }
+    main.index section.sec-carrousel{
+        display: flex;
+        justify-content: center;
+    }
     main.index section.sec-carrousel article.product:hover{
         height: 30%;
         transition-duration: 450ms;
